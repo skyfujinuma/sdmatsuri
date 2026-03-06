@@ -84,6 +84,7 @@
   z-index: 2;
 }
 
+
 .event-learn-more:hover {
   background: var(--color-brown);
   transform: translateY(-2px);
