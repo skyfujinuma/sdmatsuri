@@ -1,7 +1,6 @@
 import './Volunteer.css';
 
 const VOLUNTEER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeYlXxHOCywFuShHHr82MYIOGtP2lRmfMA7NNZH_ujjFEP31Q/viewform?usp=dialog';
-const SIGNUP_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1Pc2P1gg8iZApu99oGV0HdmWrNswBi54SOk3Fqvjc954/edit?gid=1130809807#gid=1130809807';
 
 function Volunteer() {
   return (
