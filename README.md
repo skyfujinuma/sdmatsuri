@@ -1,6 +1,6 @@
 # Matsuri Festival Website
 
-A modern website for the annual Japanese festival at UCSD with Stripe ticket sales.
+ Website for the annual Japanese festival at UCSD with Stripe ticket sales.
 
 ## Stack
 
