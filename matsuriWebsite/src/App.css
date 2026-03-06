@@ -1,0 +1,32 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-tan);
+}
+
+/* Tatami pattern applied to all page body sections */
+.main-content {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--color-light-tan);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 3.8px,
+      rgba(216, 180, 119, 0.4) 4px,
+      rgba(229, 190, 122, 0.4) 5px
+    )/*,
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      rgba(216, 181, 119, 0.4) 4px,
+      rgba(216, 181, 119, 0.4) 5px
+    )*/
+    ;
+  background-size: 240px 120px;
+}

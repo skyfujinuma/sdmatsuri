@@ -1,0 +1,25 @@
+.tickets-coming-soon {
+  min-height: calc(100vh - 200px);
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tickets-coming-soon-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tickets-coming-soon h1 {
+  font-size: 3rem;
+  color: var(--color-dark-olive);
+  font-family: var(--font-more-sugar);
+}
+
+@media (max-width: 650px) {
+  .tickets-coming-soon h1 {
+    font-size: 2rem;
+  }
+}

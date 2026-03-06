@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'More Sugar';
+  src: url('/fonts/MoreSugar.otf') format('opentype'),
+       url('/fonts/MoreSugar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'More Sugar Thin';
+  src: url('/fonts/MoreSugarThin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Architects Daughter';
+  src: url('/fonts/ArchitectsDaughter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GoodDog';
+  src: url('/fonts/GoodDog.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  --font-more-sugar: 'More Sugar', system-ui, sans-serif;
+  --font-more-sugar-thin: 'More Sugar Thin', system-ui, sans-serif;
+  --font-good-dog: 'GoodDog', system-ui, sans-serif;
+  line-height: 1.5;
+
+  /* Color Palette */
+  --color-dark-olive: #7A3901;
+  --color-light-tan: #FEE1A7;
+  --color-tan: #D8B577;
+  --color-pink: #CE84AD;
+  --color-dark-red: #E22E21;
+  --color-brown: #7A3901;
+  --color-white: #FFFFFF;
+  --color-dark-gray: #363636;
+  --color-light-gray: #7A7A7A;
+  --color-light-brown: #a85f1f;
+
+  color-scheme: light;
+  color: var(--color-dark-gray);
+  background-color: var(--color-light-tan);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-dark-red);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-pink);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-good-dog);
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-dark-red);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+button:hover {
+  background-color: var(--color-pink);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

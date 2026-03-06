@@ -1,0 +1,122 @@
+.volunteer {
+  min-height: calc(100vh - 200px);
+  padding: 40px 20px;
+}
+
+.volunteer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.volunteer h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-dark-olive);
+}
+
+.volunteer-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-light-brown);
+  font-family: var(--font-more-sugar);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.volunteer-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.volunteer-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(91, 85, 18, 0.1);
+  border: 2px solid var(--color-tan);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-light-tan);
+  border: 3px solid var(--color-tan);
+  color: var(--color-dark-red);
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-more-sugar);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h2 {
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--color-dark-olive);
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.step-content p {
+  font-size: 1.05rem;
+  color: var(--color-dark-gray);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.step-btn {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-dark-olive);
+  border: 2px solid var(--color-tan);
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.step-btn:hover {
+  background: var(--color-dark-red);
+  color: var(--color-white);
+  border-color: var(--color-dark-red);
+}
+
+@media (max-width: 650px) {
+  .volunteer h1 {
+    font-size: 3rem;
+  }
+
+  .volunteer-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .step-content {
+    text-align: center;
+  }
+
+  .step-content p {
+    margin-bottom: 1rem;
+  }
+
+  .volunteer-steps {
+    gap: 0.5rem;
+  }
+}
