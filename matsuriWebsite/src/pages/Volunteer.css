@@ -24,6 +24,29 @@
   line-height: 1.8;
 }
 
+.volunteer-cta {
+  text-align: center;
+}
+
+.volunteer-learn-more {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: var(--font-more-sugar);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-dark-red);
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.volunteer-learn-more:hover {
+  background: var(--color-brown);
+  transform: translateY(-2px);
+}
+
 .volunteer-steps {
   display: flex;
   flex-direction: column;
