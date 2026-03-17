@@ -9,6 +9,8 @@ import Volunteer from './pages/Volunteer';
 import Food from './pages/Food';
 import TicketsComingSoon from './pages/TicketsComingSoon';
 import './App.css';
+import { Analytics } from '@vercel/analytics/next';
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <Analytics />
     </Router>
   );
 }
