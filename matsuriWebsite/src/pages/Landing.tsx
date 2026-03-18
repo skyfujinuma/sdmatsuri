@@ -6,7 +6,6 @@ function Landing() {
     <div className="landing">
       <section className="hero">
         <video className="hero-video" autoPlay loop muted playsInline>
-          <source src="/matsuri-video.webm" type="video/webm" />
           <source src="/matsuri-video.mp4" type="video/mp4" />
         </video>
         <div className="hero-overlay">
