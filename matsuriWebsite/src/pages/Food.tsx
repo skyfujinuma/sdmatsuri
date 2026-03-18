@@ -9,23 +9,24 @@ interface FoodItem {
 }
 
 const foods: FoodItem[] = [
-  { id: 'yakitori', name: 'Yakitori', description: 'Grilled chicken skewers with teriyaki glaze.', image: '/food/yakitori.jpg' },
-  { id: 'oyakodon', name: 'Oyakodon', description: 'Chicken and egg over rice in a sweet dashi broth.', image: '/food/oyakodon.jpg' },
-  { id: 'gyoza', name: 'Gyoza', description: 'Pan-fried dumplings with savory filling and crispy bottom.', image: '/food/gyoza.jpg' },
-  { id: 'okonomiyaki', name: 'Okonomiyaki', description: 'Savory Japanese pancake with cabbage, sauce and mayo.', image: '/food/okonomiyaki.jpg' },
-  { id: 'ichigo-daifuku', name: 'Ichigo Daifuku', description: 'Mochi stuffed with sweet red bean paste and a whole strawberry.', image: '/food/ichigo-daifuku.jpg' },
-  { id: 'onigiri', name: 'Onigiri', description: 'Rice balls wrapped in nori, filled with salmon or tuna.', image: '/food/onigiri.jpg' },
-  { id: 'spam-musubi', name: 'Spam Musubi', description: 'Grilled Spam on rice wrapped in nori.', image: '/food/spam-musubi.jpg' },
-  { id: 'yakisoba', name: 'Yakisoba', description: 'Stir-fried noodles with vegetables and savory sauce.', image: '/food/yakisoba.jpg' },
-  { id: 'taiyaki', name: 'Taiyaki', description: 'Fish-shaped waffle filled with red bean paste or nutella.', image: '/food/taiyaki.jpg' },
+  { id: 'yakitori', name: 'Yakitori', description: 'Grilled chicken skewers with teriyaki glaze.', image: '/food/yakitori.avif' },
+  { id: 'oyakodon', name: 'Oyakodon', description: 'Chicken and egg over rice in a sweet dashi broth.', image: '/food/oyakodon.avif' },
+  { id: 'gyoza', name: 'Gyoza', description: 'Pan-fried dumplings with savory filling and crispy bottom.', image: '/food/gyoza.avif' },
+  { id: 'okonomiyaki', name: 'Okonomiyaki', description: 'Savory Japanese pancake with cabbage, sauce and mayo.', image: '/food/okonomiyaki.avif' },
+  { id: 'ichigo-daifuku', name: 'Ichigo Daifuku', description: 'Mochi stuffed with sweet red bean paste and a whole strawberry.', image: '/food/ichigo-daifuku.avif' },
+  { id: 'onigiri', name: 'Onigiri', description: 'Rice balls wrapped in nori, filled with salmon or tuna.', image: '/food/onigiri.avif' },
+  { id: 'spam-musubi', name: 'Spam Musubi', description: 'Grilled Spam on rice wrapped in nori.', image: '/food/spam-musubi.avif' },
+  { id: 'yakisoba', name: 'Yakisoba', description: 'Stir-fried noodles with vegetables and savory sauce.', image: '/food/yakisoba.avif' },
+  { id: 'taiyaki', name: 'Taiyaki', description: 'Fish-shaped waffle filled with red bean paste or nutella.', image: '/food/taiyaki.avif' },
 ];
 
 const drinks: FoodItem[] = [
-  { id: 'matcha-latte', name: 'Matcha Latte', description: 'Creamy oat milk matcha latte.', image: '/drinks/matcha-latte.jpg' },
-  { id: 'white-peach-soda', name: 'White Peach Soda', description: 'Refreshing Japanese white peach soda.', image: '/drinks/white-peach-soda.jpg' },
-  { id: 'lychee-soda', name: 'Lychee Soda', description: 'Sweet lychee-flavored soda.', image: '/drinks/lychee-soda.jpg' },
-  { id: 'matcha-float', name: 'Matcha Float', description: 'Matcha latte with a scoop of vanilla ice cream.', image: '/drinks/matcha-float.jpg' },
-  { id: 'water', name: 'Bottled Water', description: 'Cold, probably.', image: '/drinks/water.jpg' },
+  { id: 'matcha-latte', name: 'Matcha Latte', description: 'Creamy oat milk matcha latte.', image: '/drinks/matcha-latte.avif' },
+  { id: 'white-peach-soda', name: 'White Peach Soda', description: 'Refreshing Japanese white peach soda.', image: '/drinks/white-peach-soda.avif' },
+  // Note: your AVIF filename is `kychee-soda.avif` (spelling matches file name).
+  { id: 'lychee-soda', name: 'Lychee Soda', description: 'Sweet lychee-flavored soda.', image: '/drinks/kychee-soda.avif' },
+  { id: 'matcha-float', name: 'Matcha Float', description: 'Matcha latte with a scoop of vanilla ice cream.', image: '/drinks/matcha-float.avif' },
+  { id: 'water', name: 'Bottled Water', description: 'Cold, probably.', image: '/drinks/water.avif' },
 ];
 
 function Food() {
@@ -66,8 +67,17 @@ function Food() {
                   alt={item.name}
                   className="food-image"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                    (e.target as HTMLImageElement).nextElementSibling?.classList.add('visible');
+                    const img = e.target as HTMLImageElement;
+
+                    // If AVIF fails in the browser, try the JPEG version once.
+                    if (img.src.endsWith('.avif') && !img.dataset.fallbackTried) {
+                      img.dataset.fallbackTried = 'true';
+                      img.src = img.src.replace(/\.avif$/i, '.jpg');
+                      return;
+                    }
+
+                    img.style.display = 'none';
+                    img.nextElementSibling?.classList.add('visible');
                   }}
                 />
                 <div className="food-image-placeholder">Add photo</div>
