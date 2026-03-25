@@ -5,7 +5,6 @@
   background-color: var(--color-light-tan);
 }
 
-/* Tatami pattern applied to all page body sections */
 .main-content {
   flex: 1;
   width: 100%;
