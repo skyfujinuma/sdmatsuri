@@ -22,9 +22,6 @@ const foods: FoodItem[] = [
 
 const drinks: FoodItem[] = [
   { id: 'matcha-latte', name: 'Matcha Latte', description: 'Creamy oat milk matcha latte.', image: '/drinks/matcha-latte.avif' },
-  { id: 'white-peach-soda', name: 'White Peach Soda', description: 'Refreshing Japanese white peach soda.', image: '/drinks/white-peach-soda.avif' },
-  // Note: your AVIF filename is `kychee-soda.avif` (spelling matches file name).
-  { id: 'lychee-soda', name: 'Lychee Soda', description: 'Sweet lychee-flavored soda.', image: '/drinks/kychee-soda.avif' },
   { id: 'matcha-float', name: 'Matcha Float', description: 'Matcha latte with a scoop of vanilla ice cream.', image: '/drinks/matcha-float.avif' },
   { id: 'water', name: 'Bottled Water', description: 'Cold, probably.', image: '/drinks/water.avif' },
 ];
