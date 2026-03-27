@@ -8,14 +8,11 @@ function Map() {
         <p className="map-intro">Find where all the booths are located!</p>
 
         <div className="map-wrapper">
-          {/* Map image not updated yet
           <img
-            src="/oldMatsuriMap.png"
+            src="/MatsuriMap.png"
             alt="Matsuri Festival Map"
             className="map-image"
           />
-          */}
-          <div className="map-coming-soon">Coming soon!</div>
         </div>
       </div>
     </div>
