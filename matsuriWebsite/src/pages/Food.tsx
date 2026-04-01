@@ -18,6 +18,7 @@ const foods: FoodItem[] = [
   { id: 'spam-musubi', name: 'Spam Musubi', description: 'Grilled Spam on rice wrapped in nori.', image: '/food/spam-musubi.avif' },
   { id: 'yakisoba', name: 'Yakisoba', description: 'Stir-fried noodles with vegetables and savory sauce.', image: '/food/yakisoba.avif' },
   { id: 'taiyaki', name: 'Taiyaki', description: 'Fish-shaped waffle filled with red bean paste or nutella.', image: '/food/taiyaki.avif' },
+  { id: 'takoyaki', name: 'Takoyaki', description: 'Octopus balls in a savory sauce.', image: '/food/takoyaki.avif' },
 ];
 
 const drinks: FoodItem[] = [
