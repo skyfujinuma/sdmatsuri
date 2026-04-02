@@ -6,25 +6,26 @@ interface FoodItem {
   name: string;
   description: string;
   image: string;
+  price: string;
 }
 
 const foods: FoodItem[] = [
-  { id: 'yakitori', name: 'Yakitori', description: 'Grilled chicken skewers with teriyaki glaze.', image: '/food/yakitori.avif' },
-  { id: 'oyakodon', name: 'Oyakodon', description: 'Chicken and egg over rice in a sweet dashi broth.', image: '/food/oyakodon.avif' },
-  { id: 'gyoza', name: 'Gyoza', description: 'Pan-fried dumplings with savory filling and crispy bottom.', image: '/food/gyoza.avif' },
-  { id: 'okonomiyaki', name: 'Okonomiyaki', description: 'Savory Japanese pancake with cabbage, sauce and mayo.', image: '/food/okonomiyaki.avif' },
-  { id: 'ichigo-daifuku', name: 'Ichigo Daifuku', description: 'Mochi stuffed with sweet red bean paste and a whole strawberry.', image: '/food/ichigo-daifuku.avif' },
-  { id: 'onigiri', name: 'Onigiri', description: 'Rice balls wrapped in nori, filled with salmon or tuna.', image: '/food/onigiri.avif' },
-  { id: 'spam-musubi', name: 'Spam Musubi', description: 'Grilled Spam on rice wrapped in nori.', image: '/food/spam-musubi.avif' },
-  { id: 'yakisoba', name: 'Yakisoba', description: 'Stir-fried noodles with vegetables and savory sauce.', image: '/food/yakisoba.avif' },
-  { id: 'taiyaki', name: 'Taiyaki', description: 'Fish-shaped waffle filled with red bean paste or nutella.', image: '/food/taiyaki.avif' },
-  { id: 'takoyaki', name: 'Takoyaki', description: 'Octopus balls in a savory sauce.', image: '/food/takoyaki.avif' },
+  { id: 'yakitori', name: 'Yakitori', description: 'Grilled chicken skewers with teriyaki glaze.', image: '/food/yakitori.avif', price: '3 tickets [1 stick] or 5 tickets [2 sticks]' },
+  { id: 'oyakodon', name: 'Oyakodon', description: 'Chicken and egg over rice in a sweet dashi broth.', image: '/food/oyakodon.avif', price: '4 tickets' },
+  { id: 'gyoza', name: 'Gyoza', description: 'Pan-fried dumplings with savory filling and crispy bottom.', image: '/food/gyoza.avif', price: '3 tickets [4 gyoza]' },
+  { id: 'okonomiyaki', name: 'Okonomiyaki', description: 'Savory Japanese pancake with cabbage, sauce and mayo.', image: '/food/okonomiyaki.avif', price: '4 tickets' },
+  { id: 'ichigo-daifuku', name: 'Ichigo Daifuku', description: 'Mochi stuffed with sweet red bean paste and a whole strawberry.', image: '/food/ichigo-daifuku.avif', price: '2 tickets' },
+  { id: 'onigiri', name: 'Onigiri', description: 'Rice balls wrapped in nori, filled with salmon or tuna.', image: '/food/onigiri.avif', price: '3 tickets [1 item]' },
+  { id: 'spam-musubi', name: 'Spam Musubi', description: 'Grilled Spam on rice wrapped in nori.', image: '/food/spam-musubi.avif', price: '3 tickets [1 item]' },
+  { id: 'yakisoba', name: 'Yakisoba', description: 'Stir-fried noodles with vegetables and savory sauce.', image: '/food/yakisoba.avif', price: '3 tickets' },
+  { id: 'taiyaki', name: 'Taiyaki', description: 'Fish-shaped waffle filled with red bean paste or nutella.', image: '/food/taiyaki.avif', price: '3 tickets [1 Taiyaki]' },
+  { id: 'takoyaki', name: 'Takoyaki', description: 'Octopus balls in a savory sauce.', image: '/food/takoyaki.avif', price: '6 tickets [5 takoyakis]' },
 ];
 
 const drinks: FoodItem[] = [
-  { id: 'matcha-latte', name: 'Matcha Latte', description: 'Creamy oat milk matcha latte.', image: '/drinks/matcha-latte.avif' },
-  { id: 'matcha-float', name: 'Matcha Float', description: 'Matcha latte with a scoop of vanilla ice cream.', image: '/drinks/matcha-float.avif' },
-  { id: 'water', name: 'Bottled Water', description: 'Cold, probably.', image: '/drinks/water.avif' },
+  { id: 'matcha-latte', name: 'Matcha Latte', description: 'Creamy oat milk matcha latte.', image: '/drinks/matcha-latte.avif', price: '4 tickets [16 oz]' },
+  { id: 'matcha-float', name: 'Matcha Float', description: 'Matcha latte with a scoop of vanilla ice cream.', image: '/drinks/matcha-float.avif', price: '4 tickets [16 oz cups]' },
+  { id: 'water', name: 'Bottled Water', description: 'Cold, probably.', image: '/drinks/water.avif', price: '' },
 ];
 
 function Food() {
@@ -80,7 +81,10 @@ function Food() {
                 />
                 <div className="food-image-placeholder">Add photo</div>
               </div>
-              <h3 className="food-name">{item.name}</h3>
+              <div className="food-name-row">
+                <h3 className="food-name">{item.name}</h3>
+                <span className="food-price">{item.price}</span>
+              </div>
               <p className="food-description">{item.description}</p>
             </div>
           ))}

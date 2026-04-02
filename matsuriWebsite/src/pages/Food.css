@@ -99,12 +99,30 @@
   display: flex;
 }
 
+.food-name-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.3rem 1rem 0;
+}
+
 .food-name {
   font-size: 1.9rem;
   color: var(--color-dark-olive);
   margin: 0;
-  padding-left: 1rem;
-  padding-top: 0.3rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.food-price {
+  color: var(--color-dark-red);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: right;
+  flex-shrink: 0;
+  max-width: 55%;
+  line-height: 1.25;
 }
 
 .food-description {
@@ -127,6 +145,11 @@
 
   .food-name {
     font-size: 1.7rem;
+  }
+
+  .food-price {
+    font-size: 0.85rem;
+    max-width: 50%;
   }
 
   .food-description {

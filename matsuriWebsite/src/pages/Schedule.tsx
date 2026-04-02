@@ -35,7 +35,6 @@ const SCHEDULE_SECTIONS: ScheduleSection[] = [
       { id: 11, time: '8:00–8:25 PM', title: 'Blue Moon Sanitizer', description: 'San Diego based anime and game soundtrack cover band performing high-energy sets of familiar themes for conventions, festivals, and events.', location: '' },
       { id: 12, time: '8:40–9:00 PM', title: 'Patchwork', description: 'Friends band mixing genres and languages — covers that explore multiple styles while keeping the set fun and exploratory.', location: '' },
       { id: 13, time: '9:20–9:40 PM', title: 'KOTX', description: 'All-inclusive K-pop dance and social org at UCSD established in 2015 spreading Korean culture through performance and community.', location: '' },
-      { id: 14, time: '9:45–10:00 PM', title: 'Asayake Taiko', description: 'UCSD taiko ensemble. The group shares Japanese culture through taiko drumming, evoking the morning glow (asayake) of La Jolla light on the ocean.', location: '' },
     ],
   },
   {
