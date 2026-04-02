@@ -7,7 +7,6 @@ import Schedule from './pages/Schedule';
 import Map from './pages/Map';
 import Volunteer from './pages/Volunteer';
 import Food from './pages/Food';
-import TicketsComingSoon from './pages/TicketsComingSoon';
 import './App.css';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -25,7 +24,6 @@ function App() {
             <Route path="/map" element={<Map />} />
             <Route path="/volunteer" element={<Volunteer />} />
             <Route path="/food" element={<Food />} />
-            <Route path="/tickets" element={<TicketsComingSoon />} />
           </Routes>
         </main>
         <Footer />

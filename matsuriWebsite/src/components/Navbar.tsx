@@ -62,11 +62,6 @@ function Navbar() {
               Volunteer
             </Link>
           </li>
-          <li>
-            <Link to="/tickets" className={isActive('/tickets') ? 'active' : ''} onClick={closeMenu}>
-              Tickets
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>

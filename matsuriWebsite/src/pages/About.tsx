@@ -35,10 +35,8 @@ function About() {
           <div className="expectations">
             <div className="expectation-item">
               <h3>Is Matsuri free to attend?</h3>
-              <p>Yes! Matsuri is 100% free to attend. However, tickets can be
-                 purchased to exchange for food, drinks, and other activities.
-                 Tickets are available for purchase either <a href="/tickets">online </a> 
-              or at the event.</p>
+              <p>Yes! Matsuri is 100% free to attend. Tickets to exchange for food,
+                 drinks, and activities are sold at the ticket booth during the event.</p>
             </div>
             <div className="expectation-item">
               <h3>Is Matsuri only for Japanese students?</h3>

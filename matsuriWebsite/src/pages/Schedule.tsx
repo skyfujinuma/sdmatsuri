@@ -17,7 +17,6 @@ const SCHEDULE_SECTIONS: ScheduleSection[] = [
   {
     label: 'Opening',
     events: [
-      { id: 1, time: '3:30 PM', title: 'Pre-paid Ticket Pickup Begins', description: 'Tentative — Pre-paid tickets can begin to be picked up.', location: '' },
       { id: 2, time: '4:30 PM', title: 'Ticket Booth Opens', description: 'Tickets can be purchased at the booth.', location: '' },
       { id: 3, time: '5:00 PM', title: 'Matsuri Begins', description: 'Festival opens! Enjoy food and activities.', location: '' },
     ],

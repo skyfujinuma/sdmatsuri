@@ -12,8 +12,6 @@
     "postinstall": "echo 'Dependencies installed successfully'"
   },
   "dependencies": {
-    "@stripe/react-stripe-js": "^2.0.0",
-    "@stripe/stripe-js": "^4.9.0",
     "@vercel/analytics": "^2.0.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
